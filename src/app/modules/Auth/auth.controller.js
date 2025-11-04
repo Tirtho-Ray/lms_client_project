@@ -62,7 +62,7 @@ const refreshAccessToken = catchAsync(async (req, res) => {
   }
 
   const { accessToken } = await AuthServices.refreshAccessToken(refreshToken);
-  setTokensInCookies(res, accessToken, refreshToken); // only update accessToken cookie
+  setTokensInCookies(res, accessToken, refreshToken);
 
   sendResponse(res, {
     success: true,
