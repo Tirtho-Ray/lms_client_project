@@ -1,9 +1,9 @@
 import { config } from "dotenv";
-import AppError from "../../errors/appErr";
-import { createToken, verifyToken } from "../../utils/jwthelper";
-import { USER_STATUS } from "../user/user.constant";
-import User from "../user/user.model";
-import { httpStatus } from 'http-status';
+import AppError from "../../errors/appErr.js";
+import { createToken, verifyToken } from "../../utils/jwthelper.js";
+import { USER_STATUS } from "../user/user.constant.js";
+import User from "../user/user.model.js";
+import httpStatus from 'http-status';
 import bcrypt from 'bcrypt';
 
 const registerUser = async (payload) => {

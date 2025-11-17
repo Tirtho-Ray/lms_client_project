@@ -1,10 +1,8 @@
-const httpStatus = require('http-status');
-const config = require('../config');
-const AppError = require('../errors/appError');
-
-const { User } = require('../modules/user/user.model');
-const { verifyToken } = require('../utils/jwthelper');
-
+import { httpStatus } from 'http-status';
+import AppError from '../errors/appErr';
+import User from '../modules/user/user.model';
+import { verifyToken } from '../utils/jwthelper';
+import config from "./app/config/index.js";
 
 export const auth = (...requiredRoles) => {
     return async (req, res, next) => {

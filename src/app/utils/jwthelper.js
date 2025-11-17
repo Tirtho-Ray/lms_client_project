@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import jwt from "jsonwebtoken";
-import AppError from "../errors/appErr";
+import AppError from "../errors/appErr.js";
 
 
 export const createToken = (user, secret, expiresIn = "1h") => {

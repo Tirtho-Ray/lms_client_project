@@ -1,9 +1,9 @@
-const httpStatus = require('http-status');
-const { catchAsync } = require('../../utils/catchAsync');
-const { AuthServices } = require('./auth.services');
-const sendResponse = require('../../utils/sendResponse');
-const { setTokensInCookies, clearTokensFromCookies } = require('../../utils/cookieHelper');
-const AppError = require('../../errors/appError');
+import AppError from "../../errors/appErr.js";
+import { catchAsync } from "../../utils/catchAsync.js";
+import { clearTokensFromCookies, setTokensInCookies } from "../../utils/cookieHelper.js";
+import { sendResponse } from "../../utils/sendResponse.js";
+import { AuthServices } from "./auth.services.js";
+import httpStatus from 'http-status';
 
 const register = catchAsync(async (req, res) => {
   const payload = req.body;

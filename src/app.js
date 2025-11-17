@@ -3,6 +3,7 @@ import cors from "cors";
 import notFound from "./app/middleware/notfound.js";
 import routes from "./app/routes/routes.js";
 
+
 const app = express();
 
 // --- Middleware ---
