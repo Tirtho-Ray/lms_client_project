@@ -1,7 +1,7 @@
 // user.model.js
 import { Schema, model } from "mongoose";
 import bcrypt from "bcrypt";
-import { USER_ROLE, USER_STATUS } from "./user.constant";
+import { USER_ROLE, USER_STATUS } from "./user.constant.js";
 ;
 
 const userSchema = new Schema(
