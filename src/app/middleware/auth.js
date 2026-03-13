@@ -3,6 +3,9 @@ import AppError from '../errors/appErr';
 import User from '../modules/user/user.model';
 import { verifyToken } from '../utils/jwthelper';
 import config from "./app/config/index.js";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 export const auth = (...requiredRoles) => {
     return async (req, res, next) => {
