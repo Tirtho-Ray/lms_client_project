@@ -1,5 +1,8 @@
 import express from 'express';
 import { AuthRoutes } from '../modules/Auth/auth.route.js';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const routes = express.Router();
 
